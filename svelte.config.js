@@ -6,8 +6,13 @@ const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: preprocess(),
-
 	kit: {
+		csp: {
+			mode: 'auto',
+			directives: {
+				'script-src': ['self']
+			}
+		},
 		adapter: vercel()
 	}
 };
