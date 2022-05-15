@@ -7,6 +7,3 @@
 </script>
 
 <slot />
-
-<style>
-</style>
