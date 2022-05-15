@@ -14,9 +14,7 @@
 <script lang="ts">
 	export let error: Error;
 	export let status: number;
-
-	console.log(`ERROR MESSAGE, STATUS: ${status}`);
 	console.error(error);
 </script>
 
-<h1>Error</h1>
+<h1>Error {status}</h1>
