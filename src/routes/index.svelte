@@ -1,7 +1,7 @@
 <script lang="ts">
 import { read } from 'xlsx';
 
-console.log(read)
+console.log(read);
 </script>
 
 <h1>Adapter bug reproduction</h1>
