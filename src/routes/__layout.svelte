@@ -2,12 +2,13 @@
 	import type { Load } from '@sveltejs/kit';
 
 	export const load: Load = async function ({fetch, session}) {
-        const body = await fetch('/test', { method: 'GET' })
-        const result = await body.json()
+        const response = await fetch('/test', { method: 'GET' })
+        const {thing} = await response.json()
+
 		return {
             props: {
                 foo: session.foo,
-                thing: result
+                thing
             }
         };
 	};
