@@ -1,4 +1,3 @@
-
 import type { RequestHandler } from '@sveltejs/kit';
 
 export const post: RequestHandler = async function () {
@@ -8,7 +7,7 @@ export const post: RequestHandler = async function () {
     return {
         status: 200,
         headers: new Headers({
-            'Set-Cookie': `cookie=yum; Path=/; SameSite=None; Expires=${tomorrow.toUTCString()};`
+            'Set-Cookie': `cookie=yum; Path=/; SameSite=None; HttpOnly; Expires=${tomorrow.toUTCString()};`
         })
     };
 };
