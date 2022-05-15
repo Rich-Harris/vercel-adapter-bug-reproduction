@@ -4,6 +4,7 @@
 	export const load: Load = async function ({fetch, session}) {
         const response = await fetch('/test', { method: 'GET' })
         const {thing} = await response.json()
+        await fetch('/foo/set-cookie', { method: 'POST' })
 
 		return {
             props: {
